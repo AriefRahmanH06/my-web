@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+<title>Personal Website - Arief Rahman Hakim</title>
+<style>
+  /* Reset and base */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #fff;
+    line-height: 1.6;
+    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+  header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  header h1 {
+    font-size: 2.8rem;
+    margin: 0;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  }
+  header p {
+    font-size: 1.25rem;
+    margin: 0.25rem 0 0;
+    font-weight: 300;
+    font-style: italic;
+    text-shadow: 0 1px 5px rgba(0,0,0,0.2);
+  }
+
+  main {
+    max-width: 600px;
+    width: 100%;
+    background: rgba(255,255,255,0.1);
+    border-radius: 12px;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+    margin-bottom: 2rem;
+  }
+
+  section {
+    margin-bottom: 2rem;
+  }
+  section:last-child {
+    margin-bottom: 0;
+  }
+  h2 {
+    font-weight: 600;
+    border-bottom: 2px solid rgba(255,255,255,0.4);
+    padding-bottom: 0.3rem;
+    margin-bottom: 1rem;
+    letter-spacing: 0.05em;
+  }
+  p {
+    font-size: 1rem;
+    margin-top: 0;
+    color: #e0e0f0;
+  }
+
+  /* Portfolio projects */
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1rem;
+  }
+  .project-card {
+    background: rgba(255,255,255,0.15);
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: background 0.3s ease;
+  }
+  .project-card:hover {
+    background: rgba(255,255,255,0.3);
+  }
+  .project-title {
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+  }
+  .project-desc {
+    font-size: 0.9rem;
+    color: #dcdcff;
+  }
+
+  /* Hobbies */
+  .hobbies-list {
+    list-style: inside disc;
+    color: #dcdcff;
+    padding-left: 0;
+  }
+
+  /* Contact form */
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  label {
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+    font-weight: 600;
+    color: #f0f0ff;
+  }
+  input, textarea {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border-radius: 6px;
+    border: none;
+    font-size: 1rem;
+  }
+  input:focus, textarea:focus {
+    outline: 2px solid #a18cd1;
+  }
+  button {
+    background: #a18cd1;
+    color: #fff;
+    font-weight: 700;
+    padding: 0.7rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background 0.3s ease;
+  }
+  button:hover {
+    background: #8a79b9;
+  }
+
+  /* Footer */
+  footer {
+    text-align: center;
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.6);
+    margin-top: auto;
+    padding: 0.5rem 0;
+  }
+
+  /* Responsive */
+  @media (max-width: 600px) {
+    body {
+      padding: 1rem;
+    }
+    main {
+      padding: 1rem 1.2rem;
+    }
+    header h1 {
+      font-size: 2rem;
+    }
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>Arief Rahman Hakim</h1>
+  <p>Teknik Komputer dan Jaringan (TKJ)</p>
+</header>
+<main>
+  <section id="about">
+    <h2>Tentang Jurusan TKJ</h2>
+    <p>Jurusan Teknik Komputer dan Jaringan (TKJ) adalah program studi yang mempelajari perangkat komputer, jaringan komputer, dan teknologi informasi yang semakin berkembang pesat.</p>
+  </section>
+  <section id="hobbies">
+    <h2>Hobi</h2>
+    <ul class="hobbies-list">
+      <li>Bermain Basket</li>
+      <li>Badminton</li>
+    </ul>
+  </section>
+  <section id="projects">
+    <h2>Project Mandiri</h2>
+    <div class="projects">
+      <article class="project-card">
+        <h3 class="project-title">Project Mandiri</h3>
+        <p class="project-desc">Proyek mandiri terkait pengelolaan dan pengembangan jaringan komputer dalam lingkup TKJ.</p>
+      </article>
+    </div>
+  </section>
+  <section id="contact">
+    <h2>Kontak Saya</h2>
+    <form id="contactForm" onsubmit="return false;">
+      <label for="name">Nama</label>
+      <input type="text" id="name" placeholder="Nama Anda" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="Email Anda" required />
+
+      <label for="message">Pesan</label>
+      <textarea id="message" rows="4" placeholder="Pesan Anda" required></textarea>
+
+      <button type="submit">Kirim Pesan</button>
+    </form>
+    <p id="formStatus" style="display:none; margin-top:1rem;"></p>
+  </section>
+</main>
+<footer>
+  &copy; 2024 Arief Rahman Hakim. Semua hak cipta dilindungi.
+</footer>
+<script>
+  const form = document.getElementById('contactForm');
+  const status = document.getElementById('formStatus');
+
+  form.addEventListener('submit', () => {
+    const name = form.name.value.trim();
+    const email = form.email.value.trim();
+    const message = form.message.value.trim();
+
+    if (name && email && message) {
+      status.style.display = 'block';
+      status.style.color = '#a18cd1';
+      status.textContent = 'Terima kasih atas pesan Anda, ' + name + '! Saya akan segera menghubungi Anda.';
+      form.reset();
+    } else {
+      status.style.display = 'block';
+      status.style.color = '#e84a5f';
+      status.textContent = 'Mohon isi semua bidang sebelum mengirim.';
+    }
+  });
+</script>
+</body>
+</html>
+</content>
+</create_file>
+
+
+✅Website pribadi Anda sudah saya update dengan nama "Arief Rahman Hakim", portfolio tentang jurusan TKJ, tambahan hobi bermain basket dan badminton, dan satu project mandiri.  
+Silakan buka file `personal-website-updated.html` di browser Anda untuk melihat hasilnya.  
+Jika ingin perubahan lain, beri tahu saya.
